@@ -1,0 +1,16 @@
+[submodule "nodejs-server"]
+	path = nodejs-server
+	url = https://github.com/hananeltassa/moodify-server.git
+	branch = main
+[submodule "react-admin"]
+	path = react-admin
+	url = https://github.com/hananeltassa/moodify-website.git
+	branch = main
+[submodule "django-server"]
+	path = django-server
+	url = https://github.com/hananeltassa/Moodify-django.git
+	branch = main
+[submodule "moodify-app"]
+	path = moodify-app
+	url = https://github.com/hananeltassa/moodify-app.git
+	branch = main
