@@ -294,48 +294,47 @@ _Below is an example of how you can instruct your audience on installing and set
    npm install
    ```
 5. Set up PostgreSQL:
-   ### Set up PostgreSQL
 
-a. **Install PostgreSQL**:
-   - On **Windows**: Download and install PostgreSQL from [postgresql.org](https://www.postgresql.org/download/). During installation, set a username and password for the default PostgreSQL user (e.g., `postgres`).
-   - On **macOS**: Use Homebrew to install PostgreSQL:
-     ```sh
-     brew install postgresql
-     ```
-   - On **Linux**: Use your package manager (e.g., `apt` for Ubuntu):
-     ```sh
-     sudo apt update
-     sudo apt install postgresql postgresql-contrib
-     ```
-
-b. **Start PostgreSQL Service**:
-   - On **Windows**: Start the PostgreSQL service using the Services Manager.
-   - On **macOS/Linux**: Start the PostgreSQL server:
-     ```sh
-     brew services start postgresql # macOS
-     sudo service postgresql start # Linux
-     ```
-
-c. **Create a Database**:
-   - Log in to the PostgreSQL shell as the default user:
-     ```sh
-     psql -U postgres
-     ```
-   - Create a new database:
-     ```sql
-     CREATE DATABASE moodify;
-     ```
-
-d. **Add Connection Details to `.env` File**:
-   - Create a `.env` file in the root directory of the project if it doesn't exist.
-   - Add the following variables, replacing placeholder values with your actual configuration:
-     ```env
-     DB_HOST=localhost
-     DB_PORT=5432
-     DB_NAME=moodify
-     DB_USER=postgres
-     DB_PASSWORD=your_password_here
-     ```
+      a. **Install PostgreSQL**:
+         - On **Windows**: Download and install PostgreSQL from [postgresql.org](https://www.postgresql.org/download/). During installation, set a username and password for the default PostgreSQL user (e.g., `postgres`).
+         - On **macOS**: Use Homebrew to install PostgreSQL:
+           ```sh
+           brew install postgresql
+           ```
+         - On **Linux**: Use your package manager (e.g., `apt` for Ubuntu):
+           ```sh
+           sudo apt update
+           sudo apt install postgresql postgresql-contrib
+           ```
+      
+      b. **Start PostgreSQL Service**:
+         - On **Windows**: Start the PostgreSQL service using the Services Manager.
+         - On **macOS/Linux**: Start the PostgreSQL server:
+           ```sh
+           brew services start postgresql # macOS
+           sudo service postgresql start # Linux
+           ```
+      
+      c. **Create a Database**:
+         - Log in to the PostgreSQL shell as the default user:
+           ```sh
+           psql -U postgres
+           ```
+         - Create a new database:
+           ```sql
+           CREATE DATABASE moodify;
+           ```
+      
+      d. **Add Connection Details to `.env` File**:
+         - Create a `.env` file in the root directory of the project if it doesn't exist.
+         - Add the following variables, replacing placeholder values with your actual configuration:
+           ```env
+           DB_HOST=localhost
+           DB_PORT=5432
+           DB_NAME=moodify
+           DB_USER=postgres
+           DB_PASSWORD=your_password_here
+           ```
 
 7. Run migrations to set up the database schema:
    ```sh
